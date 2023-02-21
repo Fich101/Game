@@ -1,0 +1,165 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player/Idle.anim" type="Animation" id=1]
+[ext_resource path="res://Player/ .anim" type="Animation" id=2]
+[ext_resource path="res://Player/Player_test_.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Player_test2.gd" type="Script" id=4]
+
+[sub_resource type="Skin" id=1]
+resource_name = "Skin"
+bind_count = 16
+bind/0/name = "bone"
+bind/0/bone = -1
+bind/0/pose = Transform( 1, 6.68124e-07, 2.55343e-07, 3.12639e-13, -0.356996, 0.934106, 7.15256e-07, -0.934107, -0.356996, -2.11195e-06, 2.52975, 2.95273 )
+bind/1/name = "bone_1"
+bind/1/bone = -1
+bind/1/pose = Transform( 1, -4.93608e-09, -2.38367e-07, -1.90514e-12, 0.999787, -0.0207033, 2.38418e-07, 0.0207037, 0.999786, -3.20873e-08, -3.24158, 0.134583 )
+bind/2/name = "bone_2"
+bind/2/bone = -1
+bind/2/pose = Transform( 0.999358, 0.000333687, -0.0358337, -0.00492785, 0.991738, -0.128196, 0.0354948, 0.128291, 0.991101, -0.00897917, -3.85857, -0.282887 )
+bind/3/name = "bone_8"
+bind/3/bone = -1
+bind/3/pose = Transform( -0.00482848, 0.99999, -3.12939e-07, -0.999988, -0.00482846, -2.2143e-09, -3.38165e-09, 7.00347e-07, 1, -4.40686, -0.88221, 0.141146 )
+bind/4/name = "bone_9"
+bind/4/bone = -1
+bind/4/pose = Transform( -0.00862037, 0.999964, -1.56465e-07, -0.999963, -0.00862035, -3.68335e-09, -4.68835e-09, 5.4385e-07, 1, -4.41516, -2.18036, 0.141147 )
+bind/5/name = "bone_14"
+bind/5/bone = -1
+bind/5/pose = Transform( -0.00482846, -0.99999, 1.93695e-07, 0.999988, -0.00482849, 4.6606e-09, -1.13506e-09, 5.36454e-07, 1, 4.40895, -0.883859, 0.141147 )
+bind/6/name = "bone_15"
+bind/6/bone = -1
+bind/6/pose = Transform( -0.00862033, -0.999964, 1.76969e-07, 0.999963, -0.00862037, -3.64378e-10, 4.48013e-09, 5.19698e-07, 1, 4.41726, -2.182, 0.141147 )
+bind/7/name = "bone_3"
+bind/7/bone = -1
+bind/7/pose = Transform( 0.998279, 0.0564425, -0.0159195, -0.0298446, 0.722632, 0.69059, 0.0504825, -0.688927, 0.723071, -0.273952, -3.2645, 3.58391 )
+bind/8/name = "bone_10"
+bind/8/bone = -1
+bind/8/pose = Transform( -0.465044, 0.885289, -1.71513e-07, -0.885287, -0.465045, -1.98333e-07, -1.8351e-07, 5.09554e-07, 1, -2.47225, 1.15845, 0.16323 )
+bind/9/name = "bone_11"
+bind/9/bone = -1
+bind/9/pose = Transform( -0.999315, 0.0370117, 2.60154e-07, -0.0370116, -0.999316, -4.52299e-07, 3.15069e-07, -1.16691e-08, 1, -0.952414, 2.30375, 0.163231 )
+bind/10/name = "bone_12"
+bind/10/bone = -1
+bind/10/pose = Transform( -0.998716, 0.0506595, 3.93084e-07, -0.0506593, -0.998717, -6.40546e-07, 4.31962e-07, -2.09688e-07, 1, -0.971344, 1.37912, 0.163232 )
+bind/11/name = "bone_13"
+bind/11/bone = -1
+bind/11/pose = Transform( -0.998915, 0.0463933, 0.00392559, 7.91625e-08, -0.0843139, 0.996439, 0.046559, 0.99536, 0.0842229, -0.970227, 0.175875, -0.0974696 )
+bind/12/name = "bone_16"
+bind/12/bone = -1
+bind/12/pose = Transform( -0.465044, -0.885288, -8.30161e-08, 0.885287, -0.465045, -2.26475e-07, 8.64944e-08, 3.24869e-07, 1, 2.47486, 1.15795, 0.16323 )
+bind/13/name = "bone_17"
+bind/13/bone = -1
+bind/13/pose = Transform( -0.999315, -0.0370116, 1.42281e-06, 0.0370118, -0.999316, -5.06128e-07, 1.36517e-06, 5.05617e-08, 1, 0.954149, 2.30577, 0.16323 )
+bind/14/name = "bone_18"
+bind/14/bone = -1
+bind/14/pose = Transform( -0.998716, -0.0506595, 1.87424e-06, 0.0506597, -0.998717, -6.94391e-07, 1.83162e-06, -9.48684e-08, 1, 0.973107, 1.38111, 0.16323 )
+bind/15/name = "bone_19"
+bind/15/bone = -1
+bind/15/pose = Transform( -0.998916, 0.0463946, 0.00392569, -5.40168e-08, -0.0843137, 0.996439, 0.0465601, 0.99536, 0.0842227, 0.958514, 0.176051, -0.189449 )
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 1.067
+height = 1.5
+
+[node name="Player_test" type="KinematicBody"]
+script = ExtResource( 4 )
+
+[node name="Body" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98938, -1.30894 )
+
+[node name="Skeleton" type="Skeleton" parent="Body"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1.78082, 0.487922 )
+bones/0/name = "bone"
+bones/0/parent = -1
+bones/0/rest = Transform( 1, 8.52651e-14, 7.15254e-07, 6.68124e-07, -0.356996, -0.934105, 2.55343e-07, 0.934106, -0.356996, 0, 0, 0 )
+bones/0/enabled = true
+bones/0/bound_children = [  ]
+bones/1/name = "bone_1"
+bones/1/parent = 0
+bones/1/rest = Transform( 1, 6.62693e-07, 5.07539e-07, -2.20898e-07, -0.376259, 0.926515, 8.04961e-07, -0.926515, -0.376259, -1.66936e-13, 1.18538, -4.47035e-08 )
+bones/1/enabled = true
+bones/1/bound_children = [  ]
+bones/2/name = "bone_2"
+bones/2/parent = 1
+bones/2/rest = Transform( 0.999358, -0.00492782, 0.0354946, 0.0010755, 0.994178, 0.107744, -0.0358189, -0.107636, 0.993545, -1.73579e-15, 0.625013, 1.49012e-08 )
+bones/2/enabled = true
+bones/2/bound_children = [  ]
+bones/3/name = "bone_8"
+bones/3/parent = 2
+bones/3/rest = Transform( -0.00449169, -0.999348, -0.0358337, 0.991749, 0.000139236, -0.128196, 0.128117, -0.0361139, 0.991101, -0.90535, 0.530148, 0.109957 )
+bones/3/enabled = true
+bones/3/bound_children = [  ]
+bones/4/name = "bone_9"
+bones/4/parent = 3
+bones/4/rest = Transform( 0.999993, -0.00379197, -1.56489e-07, 0.00379197, 0.999993, 2.06233e-09, 1.5648e-07, -2.65572e-09, 1, -8.81563e-07, 1.31488, 1.82231e-09 )
+bones/4/enabled = true
+bones/4/bound_children = [  ]
+bones/5/name = "bone_14"
+bones/5/parent = 2
+bones/5/rest = Transform( -0.00515902, 0.999345, -0.0358337, -0.991701, -0.00971639, -0.128196, -0.12846, 0.034875, 0.991101, 0.902104, 0.523303, 0.174421 )
+bones/5/enabled = true
+bones/5/bound_children = [  ]
+bones/6/name = "bone_15"
+bones/6/parent = 5
+bones/6/rest = Transform( 0.999993, 0.00379195, 1.67287e-08, -0.00379195, 0.999993, 5.69603e-09, -1.6707e-08, -5.75942e-09, 1, 8.16248e-08, 1.31488, -1.23299e-08 )
+bones/6/enabled = true
+bones/6/bound_children = [  ]
+bones/7/name = "bone_3"
+bones/7/parent = 2
+bones/7/rest = Transform( 0.998227, -0.0543307, 0.0243098, 0.0530975, 0.628276, -0.776177, 0.0268969, 0.776091, 0.630047, -2.32831e-10, 0.988737, -5.97938e-08 )
+bones/7/enabled = true
+bones/7/bound_children = [  ]
+bones/8/name = "bone_10"
+bones/8/parent = 0
+bones/8/rest = Transform( -0.465044, -0.885288, 1.49012e-07, -0.316045, 0.166019, 0.934106, -0.826952, 0.4344, -0.356997, -0.124143, 1.40361, 0.463341 )
+bones/8/enabled = true
+bones/8/bound_children = [  ]
+bones/9/name = "bone_11"
+bones/9/parent = 8
+bones/9/rest = Transform( 0.497492, -0.867469, -6.93293e-07, 0.867469, 0.497492, -1.98994e-07, 5.17529e-07, -5.02412e-07, 1, 1.17403e-07, 0.838545, 6.85518e-08 )
+bones/9/enabled = true
+bones/9/bound_children = [  ]
+bones/10/name = "bone_12"
+bones/10/parent = 9
+bones/10/rest = Transform( 0.999907, 0.0136606, -1.24143e-07, -0.0136606, 0.999907, 1.93556e-07, 1.26775e-07, -1.91842e-07, 1, -1.26629e-08, 0.911492, -2.25804e-09 )
+bones/10/enabled = true
+bones/10/bound_children = [  ]
+bones/11/name = "bone_13"
+bones/11/parent = 10
+bones/11/rest = Transform( 0.999983, -0.00427092, 0.00392507, 0.0042708, 0.0842054, -0.996439, 0.0039252, 0.996439, 0.0842222, 7.36722e-08, 1.27133, -1.7444e-08 )
+bones/11/enabled = true
+bones/11/bound_children = [  ]
+bones/12/name = "bone_16"
+bones/12/parent = 0
+bones/12/rest = Transform( -0.465045, 0.885287, 4.47035e-07, 0.316044, 0.166019, 0.934106, 0.826952, 0.434401, -0.356996, 0.125801, 1.40286, 0.461393 )
+bones/12/enabled = true
+bones/12/bound_children = [  ]
+bones/13/name = "bone_17"
+bones/13/parent = 12
+bones/13/rest = Transform( 0.497492, 0.867469, -3.518e-07, -0.867469, 0.497492, 1.25956e-06, 1.26765e-06, -3.21444e-07, 1, -4.60538e-08, 0.838545, 6.02613e-08 )
+bones/13/enabled = true
+bones/13/bound_children = [  ]
+bones/14/name = "bone_18"
+bones/14/parent = 13
+bones/14/rest = Transform( 0.999907, -0.0136608, -4.60748e-07, 0.0136608, 0.999907, 1.62594e-07, 4.58484e-07, -1.68873e-07, 1, -1.61794e-08, 0.911492, 2.19669e-08 )
+bones/14/enabled = true
+bones/14/bound_children = [  ]
+bones/15/name = "bone_19"
+bones/15/parent = 14
+bones/15/rest = Transform( 0.995282, 0.00427318, -0.0969247, -0.0969395, 0.084205, -0.991722, 0.00392375, 0.996439, 0.0842221, -1.72253e-08, 1.27133, -3.53096e-09 )
+bones/15/enabled = true
+bones/15/bound_children = [  ]
+
+[node name="MeshInstance" type="MeshInstance" parent="Body/Skeleton"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.309959, 0 )
+mesh = ExtResource( 3 )
+skin = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Idle"
+anims/Idle = ExtResource( 1 )
+anims/Move = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.6, 0, 0, 0, -3.49691e-08, 0.9, 0, -0.8, -3.93403e-08, 0, 1.63, 0.067 )
+shape = SubResource( 2 )
