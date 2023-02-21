@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://texture_02.png" type="Texture" id=1]
 [ext_resource path="res://texture_01.png" type="Texture" id=2]
 [ext_resource path="res://Player_test2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://CSGCombiner.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -42,7 +43,11 @@ doppler_tracking = 1
 fov = 100.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+pause_mode = 1
 environment = SubResource( 2 )
+
+[node name="CSGCombiner" parent="WorldEnvironment" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.05906, 54.7888 )
 
 [node name="Colision test" type="Node" parent="."]
 

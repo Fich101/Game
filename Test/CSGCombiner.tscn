@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://new_spatialmaterial.tres" type="Material" id=1]
+
+[node name="CSGCombiner" type="CSGCombiner"]
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="."]
+width = 15.2995
+height = 12.7448
+depth = 69.7846
+material = ExtResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0547543, 0, -0.414505 )
+operation = 2
+width = 10.5911
+height = 7.44255
+depth = 73.2961
+material = ExtResource( 1 )
