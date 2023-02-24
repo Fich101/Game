@@ -1,0 +1,28 @@
+[gd_scene format=2]
+
+[node name="CSGCombiner" type="CSGCombiner"]
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.849295, 0, 0 )
+width = 8.62576
+height = 0.002
+depth = 60.9983
+
+[node name="CSGBox3" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.34495, 4.81032, 0 )
+width = 0.002
+height = 10.0411
+depth = 60.8561
+
+[node name="CSGBox4" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33108, 4.82043, 0 )
+width = 0.002
+height = 9.95527
+depth = 60.8106
+
+[node name="CSGBox5" type="CSGBox" parent="CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.68494, 0 )
+width = 9.23625
+height = 0.0981875
+depth = 61.078

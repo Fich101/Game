@@ -1,15 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://texture_02.png" type="Texture" id=1]
 [ext_resource path="res://texture_01.png" type="Texture" id=2]
 [ext_resource path="res://Player_test2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://CSGCombiner.tscn" type="PackedScene" id=4]
-
-[sub_resource type="ProceduralSky" id=1]
-
-[sub_resource type="Environment" id=2]
-background_mode = 2
-background_sky = SubResource( 1 )
+[ext_resource path="res://corridor.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CubeMesh" id=7]
 
@@ -41,13 +35,6 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2.45
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.99207e-08, -0.0174034, 0.437871 )
 doppler_tracking = 1
 fov = 100.0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-pause_mode = 1
-environment = SubResource( 2 )
-
-[node name="CSGCombiner" parent="WorldEnvironment" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.05906, 54.7888 )
 
 [node name="Colision test" type="Node" parent="."]
 
@@ -268,6 +255,9 @@ script = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Colision test/Stairs/MeshInstance17/StaticBody"]
 shape = SubResource( 9 )
+
+[node name="CSGCombiner" parent="Colision test" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50.4028 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0 )
