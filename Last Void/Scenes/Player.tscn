@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/flashlight.tscn" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Walk_camera"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -0.179, -0.169, 0 ), Vector3( -1.49012e-08, -1.49012e-08, 0 ) ]
+}
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.03935, 0 )
+script = ExtResource( 1 )
+
+[node name="collision" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 3.60991, 0 )
+shape = SubResource( 1 )
+
+[node name="head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.58148, 1.65995 )
+
+[node name="Camera" type="Camera" parent="head"]
+transform = Transform( 0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, -1.49012e-08, -1.49012e-08, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="head/Camera"]
+anims/Walk_camera = SubResource( 2 )
+
+[node name="flashlight" parent="head" instance=ExtResource( 2 )]
+transform = Transform( -0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, -0.884, -0.677, -1.355 )
+
+[node name="SpotLight" type="SpotLight" parent="head"]
+transform = Transform( 0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0, -0.30071 )
+light_color = Color( 0.933333, 0.894118, 0.588235, 1 )
+light_energy = 5.205
+spot_range = 14.0823
+spot_angle = 17.8956
