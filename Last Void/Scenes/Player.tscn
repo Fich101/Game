@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/flashlight.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="Environment" id=3]
+background_mode = 4
+background_energy = 2.52
+ssao_enabled = true
 
 [sub_resource type="Animation" id=2]
 resource_name = "Walk_camera"
@@ -34,7 +39,8 @@ shape = SubResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.58148, 1.65995 )
 
 [node name="Camera" type="Camera" parent="head"]
-transform = Transform( 0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, -1.49012e-08, -1.49012e-08, 0 )
+transform = Transform( 0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0, 0 )
+environment = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="head/Camera"]
 anims/Walk_camera = SubResource( 2 )

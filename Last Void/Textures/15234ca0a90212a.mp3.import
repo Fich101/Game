@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/15234ca0a90212a.mp3-c317dd8e96b25d9b147c89e6c908f35c.mp3str"
+
+[deps]
+
+source_file="res://Textures/15234ca0a90212a.mp3"
+dest_files=[ "res://.import/15234ca0a90212a.mp3-c317dd8e96b25d9b147c89e6c908f35c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

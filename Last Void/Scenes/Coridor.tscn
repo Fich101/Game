@@ -107,6 +107,7 @@ transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 10, 
 [node name="OmniLight" type="OmniLight" parent="floor2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.55599, -2.23452e-07 )
 shadow_enabled = true
+shadow_color = Color( 0.227451, 0.223529, 0.223529, 1 )
 omni_range = 21.054
 omni_attenuation = 0.466517
 omni_shadow_mode = 0
