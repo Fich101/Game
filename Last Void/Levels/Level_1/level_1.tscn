@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Models/objects/action.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/flashlight_object.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/sheet_action.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/chair.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/sheet.gd" type="Script" id=5]
+[ext_resource path="res://Models/objects/chips.obj" type="ArrayMesh" id=6]
+[ext_resource path="res://Models/Envirment/little_rocks.obj" type="ArrayMesh" id=7]
+[ext_resource path="res://Scenes/hz_test_room.tscn" type="PackedScene" id=8]
+
+[sub_resource type="PlaneMesh" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.933333, 0.0745098, 0.0745098, 1 )
+roughness = 0.34
+
+[node name="level_1" type="Spatial"]
+
+[node name="flashlight" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.1, 0, -8.74228e-09, 0, 0.1, 0, 8.74228e-09, 0, -0.1, 7.27622, 0.71106, 21.5992 )
+
+[node name="action" parent="flashlight" instance=ExtResource( 1 )]
+transform = Transform( 1.88222, 0, -4.54688e-08, 0, 1.71209, 0, -7.04271e-09, 0, 5.31921, -0.0032959, 0, -1.75238 )
+action_name = "FlashLight"
+action_id = "flash"
+
+[node name="sheet" type="MeshInstance" parent="."]
+transform = Transform( 0.294837, 0, -0.227365, 0, 7.07558, 0, 0.320903, 0, 0.208897, 27.1756, 0.164007, 28.0442 )
+mesh = SubResource( 3 )
+script = ExtResource( 5 )
+text = "І настане час, коли один скаже: \"Слава Україні!\" і мільйони відповідатимуть: \"Героям Слава!\""
+
+[node name="sheet_action" parent="sheet" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 0.0135205, 0, 0, 0, 1.17062, 0, 0, 0 )
+action_name = "Test"
+delete_parent = false
+delete_on_action = false
+parent_func = "read"
+
+[node name="chips" type="MeshInstance" parent="."]
+transform = Transform( -0.282843, 0.103148, -0.263364, -1.91289e-08, 0.372453, 0.145873, 0.282843, 0.103148, -0.263364, 27.173, 1.414, 28.113 )
+mesh = ExtResource( 6 )
+material/0 = SubResource( 4 )
+
+[node name="action" parent="chips" instance=ExtResource( 1 )]
+transform = Transform( 1.00476, -7.33136e-15, -4.26326e-14, 5.84454e-14, 2.00952, -2.98023e-08, 9.9476e-14, 5.96046e-08, 1.00476, 0, 1.35755, 0.138863 )
+action_name = "Battery"
+action_id = "battery"
+
+[node name="little_rocks" type="MeshInstance" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 5.79804, 4.76837e-07, 21.5222 )
+mesh = ExtResource( 7 )
+
+[node name="little_rocks2" type="MeshInstance" parent="."]
+transform = Transform( 0.157909, 0, 0.193816, 0, 0.25, 0, -0.193816, 0, 0.157909, 5.5653, 0, 21.1191 )
+mesh = ExtResource( 7 )
+skeleton = NodePath("../little_rocks")
+
+[node name="chair" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.494975, 0, -0.494975, 0, 0.7, 0, 0.494975, 0, -0.494975, 27.0834, 0, 27.8766 )
+
+[node name="hz_test_room" parent="." instance=ExtResource( 8 )]
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 0.895424, 5.83827e-08, 0.445214, -0.445214, 1.17421e-07, 0.895424, 0, -1, 1.31134e-07, 10.9975, 9.35785, 20.9615 )
+light_color = Color( 0.498039, 0.52549, 0.247059, 1 )
+light_energy = 4.16
+spot_range = 21.0921
+spot_angle = 26.9455
+
+[node name="SpotLight" type="SpotLight" parent="SpotLight"]
+transform = Transform( 0.765687, -0.477286, -0.431185, 0.50558, 0.861008, -0.0552695, 0.397633, -0.175679, 0.900569, 13.4542, -5.7777, 7.21283 )
+light_color = Color( 0.498039, 0.52549, 0.247059, 1 )
+light_energy = 4.16
+spot_range = 21.0921
+spot_angle = 26.9455
