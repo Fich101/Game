@@ -1,0 +1,78 @@
+2a60927148abd1d33b818b535e306557
+::res://::1678392197
+default_env.tres::Environment::5001620567985903974::1678392030::0::1::::<><>::
+icon.png::CompressedTexture2D::7649162198695535633::1677781778::1678390652::1::::<><>::
+warehouse_shelving_unit_5.png::CompressedTexture2D::9506011306383033::1678392196::1678392197::1::::<><>::
+warehouse_shelving_unit_4.png::CompressedTexture2D::1817218569538825328::1678392196::1678392197::1::::<><>::
+warehouse_shelving_unit_3.png::CompressedTexture2D::1743569652884778086::1678392196::1678392197::1::::<><>::
+warehouse_shelving_unit_2.png::CompressedTexture2D::414933665397979494::1678392195::1678392197::1::::<><>::
+warehouse_shelving_unit_1.png::CompressedTexture2D::8794062197257458207::1678392195::1678392197::1::::<><>::
+warehouse_shelving_unit_0.png::CompressedTexture2D::2269913918616930344::1678392194::1678392197::1::::<><>::
+test_room.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Models/test/untitled.obj
+warehouse_shelving_unit.glb::::-1::1678392194::1678392197::0::::<><>::
+zloveshchie-shepoty_[Pro-Sound.org].mp3::AudioStreamMP3::4045315749208957735::1677792614::1678390652::1::::<><>::
+::res://Materials/::1677786983
+concrete_parallax.tres::StandardMaterial3D::-1::1678390615::0::1::::<><>::res://Textures/Concrete/PaintedPlaster008_4K_Normal.jpg<>res://Textures/Concrete/PaintedPlaster008_4K_Roughness.jpg<>res://Textures/Concrete/PaintedPlaster008_4K_AmbientOcclusion.jpg<>res://Textures/Concrete/PaintedPlaster008_4K_Color.jpg<>res://Textures/Concrete/PaintedPlaster008_4K_Displacement.jpg
+floor.tres::StandardMaterial3D::-1::1678390615::0::1::::<><>::res://Textures/Floor/WoodFloortOcclusion.jpg<>res://Textures/Floor/WoodFloor035_4K_Normal.jpg<>res://Textures/Floor/WoodFloor_Color.jpg<>res://Textures/Floor/WoodFloorDisplacement.jpg<>res://Textures/Floor/WoodFloor.jpg
+::res://Models/::1677923303
+::res://Models/Envirment/::1678391657
+door.glb::PackedScene::4374451491919355589::1677781777::1678391657::1::::<><>::
+floor.glb::PackedScene::1716016687961273666::1677781777::1678390657::1::::<><>::
+floor_big.glb::PackedScene::8614053771593497461::1677781777::1678390656::1::::<><>::
+Material.material::StandardMaterial3D::-1::1677781777::0::1::::<><>::
+Material_001.material::StandardMaterial3D::-1::1677781777::0::1::::<><>::
+Material_002.material::StandardMaterial3D::-1::1677781777::0::1::::<><>::
+Material_004.material::StandardMaterial3D::-1::1677781777::0::1::::<><>::
+wall_with_door.glb::PackedScene::8996142344212552372::1677781777::1678390656::1::::<><>::
+wall_with_window.glb::PackedScene::6979298901635245543::1677781777::1678390656::1::::<><>::
+Матеріал_001.material::StandardMaterial3D::-1::1677781777::0::1::::<><>::
+Матеріал_002.material::StandardMaterial3D::-1::1677781777::0::1::::<><>::
+::res://Models/Items/::1678390655
+flashlight.glb::PackedScene::7804516402094347607::1677781777::1678390655::1::::<><>::
+::res://Models/test/::1678392219
+warehouse_shelving_unit (1)_5.png::CompressedTexture2D::4564020196519747322::1678392225::1678392226::1::::<><>::
+warehouse_shelving_unit (1)_4.png::CompressedTexture2D::2891274920226983482::1678392225::1678392226::1::::<><>::
+warehouse_shelving_unit (1)_3.png::CompressedTexture2D::7122193498058180071::1678392224::1678392226::1::::<><>::
+warehouse_shelving_unit (1)_2.png::CompressedTexture2D::4013918563976461329::1678392221::1678392226::1::::<><>::
+warehouse_shelving_unit (1)_1.png::CompressedTexture2D::8091763730954163580::1678392220::1678392226::1::::<><>::
+warehouse_shelving_unit (1)_0.png::CompressedTexture2D::1672591844714210538::1678392220::1678392226::1::::<><>::
+untitled.obj::Mesh::5159501501711185506::1677923307::1678390655::1::::<><>::
+warehouse_shelving_unit (1).glb::::-1::1678392219::0::0::::<><>::
+::res://Scenes/::1678392030
+Coridor.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Scenes/floor.tscn<>res://Scenes/wall_with_door_dirt.tscn
+door.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Models/Envirment/door.glb
+Enemy.tscn::PackedScene::-1::1678390615::0::1::::<><>::
+flashlight.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Models/Items/flashlight.glb
+floor.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Models/Envirment/floor.glb<>res://Materials/floor.tres
+Game.tscn::PackedScene::4863568668655637047::1678392030::0::1::::<><>::res://Scenes/Player.tscn<>res://Scenes/Coridor.tscn<>res://Scripts/Game.gd<>uid://bfvgfxbxryeuq<>uid://bxvt0227bf2rb<>res://test_room.tscn
+Player.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Scripts/Player.gd<>res://Scenes/flashlight.tscn
+wall_with_door.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Models/Envirment/wall_with_door.glb<>res://Materials/concrete_parallax.tres
+wall_with_door_dirt.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Materials/concrete_parallax.tres
+wall_with_window_bugged.tscn::PackedScene::-1::1678390615::0::1::::<><>::res://Textures/concrete_dirty.jpg<>res://Models/Envirment/wall_with_window.glb
+::res://Scripts/::1677781777
+Game.gd::GDScript::-1::1678390615::0::1::::<>Node<>::
+Player.gd::GDScript::-1::1678390615::0::1::::<>CharacterBody3D<>::
+::res://Style/::1677781777
+Theme.tres::Theme::-1::1678390615::0::1::::<><>::
+::res://Textures/::1678390653
+2crohair.jpg::CompressedTexture2D::3783681794934720300::1677781777::1678390652::1::::<><>::
+15234ca0a90212a.mp3::AudioStreamMP3::125372219400141223::1677782306::1678390652::1::::<><>::
+concrete_damaged.jpg::CompressedTexture2D::8935464745164909306::1677781778::1678390653::1::::<><>::
+concrete_dirty.jpg::CompressedTexture2D::1146965526806680422::1677781778::1678390652::1::::<><>::
+Cross4.jpg::CompressedTexture2D::3995410798311777993::1677781778::1678390652::1::::<><>::
+Crosshair3.png::CompressedTexture2D::2781091276295180344::1677781778::1678390652::1::::<><>::
+texture_01.png::CompressedTexture2D::5163705636610211978::1677781778::1678390652::1::::<><>::
+texture_02.png::CompressedTexture2D::3940970386633302278::1677781778::1678390652::1::::<><>::
+wood_planks.jpg::CompressedTexture2D::4440595323580539097::1677781778::1678390652::1::::<><>::
+::res://Textures/Concrete/::1678391662
+PaintedPlaster008_4K_AmbientOcclusion.jpg::CompressedTexture2D::7909859955150260965::1677781777::1678391662::1::::<><>::
+PaintedPlaster008_4K_Color.jpg::CompressedTexture2D::6054551305028761329::1677781778::1678391662::1::::<><>::
+PaintedPlaster008_4K_Displacement.jpg::CompressedTexture2D::1430979451037280377::1677781778::1678391662::1::::<><>::
+PaintedPlaster008_4K_Normal.jpg::CompressedTexture2D::4649372736782542561::1677781778::1678391662::1::::<><>::
+PaintedPlaster008_4K_Roughness.jpg::CompressedTexture2D::7032383190689392976::1677781778::1678391661::1::::<><>::
+::res://Textures/Floor/::1678391662
+WoodFloor035_4K_Normal.jpg::CompressedTexture2D::2528394782369396385::1677781778::1678391662::1::::<><>::
+WoodFloor.jpg::CompressedTexture2D::6910518184715261892::1677781778::1678391661::1::::<><>::
+WoodFloorDisplacement.jpg::CompressedTexture2D::1421017773413429244::1677781778::1678391661::1::::<><>::
+WoodFloortOcclusion.jpg::CompressedTexture2D::7413379867232251399::1677781778::1678391661::1::::<><>::
+WoodFloor_Color.jpg::CompressedTexture2D::1261889347861356745::1677781778::1678391662::1::::<><>::

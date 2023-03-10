@@ -1,14 +1,14 @@
-extends KinematicBody
+extends CharacterBody3D
 
 const VEL_SPEED = 2
 const GRAVITY = -20
 const JUMP_SPEED = 8
 const ROT_SPEED = 0.004
 
-onready var head = $head
-onready var body = $collision
-onready var flash = $head/SpotLight
-onready var anim = $head/Camera/AnimationPlayer
+@onready var head = $head
+@onready var body = $collision
+@onready var flash = $head/SpotLight3D
+@onready var anim = $head/Camera3D/AnimationPlayer
 
 var rot_y = 0
 var rot_x = 0
@@ -74,7 +74,10 @@ func _physics_process(delta):
 	vel.x = dir.x
 	vel.z = dir.z
 	vel.y += GRAVITY * delta
-	vel = move_and_slide(vel, Vector3.UP)
+	set_velocity(vel)
+	set_up_direction(Vector3.UP)
+	move_and_slide()
+	vel = velocity
 
 
 func _input(e):
@@ -89,8 +92,8 @@ func _input(e):
 func light():
 	if Input.is_action_just_pressed("ui_left_click"):
 		if torch == false:
-			$head/SpotLight.hide()
+			$head/SpotLight3D.hide()
 			torch = true
 		else:
-			$head/SpotLight.show()
+			$head/SpotLight3D.show()
 			torch = false
